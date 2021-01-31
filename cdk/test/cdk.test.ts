@@ -1,6 +1,6 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import { App} from 'monocdk';
-import {AppStack} from '../lib/stack';
+import {AppStack} from '../lib/app-stack';
 
 test('Empty Stack', () => {
     const app = new App();

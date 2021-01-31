@@ -1,5 +1,5 @@
 import { Construct, Stage, StageProps } from 'monocdk';
-import { AppStack } from './stack';
+import { AppStack } from './app-stack';
 
 export class AppStage extends Stage {
     constructor(scope: Construct, id: string, props?: StageProps) {

@@ -2,7 +2,7 @@ import {Construct, Stack, StackProps, SecretValue} from 'monocdk';
 import { Artifact } from 'monocdk/aws-codepipeline';
 import { GitHubSourceAction } from 'monocdk/aws-codepipeline-actions';
 import { CdkPipeline, SimpleSynthAction} from 'monocdk/pipelines';
-import { AppStage } from './stage';
+import { AppStage } from './app-stage';
 
 export class PipelineStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
@@ -22,8 +22,8 @@ export class PipelineStack extends Stack {
                 actionName: 'Github',
                 output: sourceArtifact,
                 oauthToken: SecretValue.secretsManager('github-token'),
-                owner: 'evanparizot',
-                repo:''
+                owner: '', // Username or organization housing repository
+                repo:'' // This repository's name
             }),
 
             synthAction: SimpleSynthAction.standardNpmSynth({

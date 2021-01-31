@@ -1,12 +1,12 @@
-# aws-app-template
+## File Structure
+```
 .
 ├── cdk/
 │   ├── bin/
 │   ├── cdk.out/
 │   ├── lib/
-│   ├── node_modules/
 │   ├── test/
 │   └── package.json
-├── src/
-├── .gitignore
-└── README.md
+└── src/
+    └── Dockerfile
+```
